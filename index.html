@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Brilliant Wendo Firnanda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== MENU ATAS ===== -->
+  <header class="nav">
+    <a href="#beranda" class="logo" id="logo">Portofolio</a>
+    <nav class="menu" id="menu">
+      <a href="#tentang">Tentang</a>
+      <a href="#pendidikan">Pendidikan</a>
+      <a href="#project">Project</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <button class="btn small" id="btnEdit">✏️ Edit</button>
+    <button class="burger" id="burger" aria-label="Buka menu">☰</button>
+  </header>
+
+  <main>
+    <!-- ===== BERANDA ===== -->
+    <section id="beranda" class="hero">
+      <div class="hero-text">
+        <p class="chip" id="tTag"></p>
+        <h1 id="tNama"></h1>
+        <h2 id="tPeran"></h2>
+        <p class="lead" id="tSingkat"></p>
+        <div class="actions">
+          <a class="btn" href="#project">Lihat Project</a>
+          <a class="btn ghost" href="#kontak">Hubungi Saya</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="circle"><img id="foto" src="foto.jpg" alt="Foto profil"></div>
+      </div>
+    </section>
+
+    <!-- ===== TENTANG ===== -->
+    <section id="tentang" class="sec">
+      <h3 class="title">Tentang Saya</h3>
+      <p class="about" id="tTentang"></p>
+    </section>
+
+    <!-- ===== PENDIDIKAN ===== -->
+    <section id="pendidikan" class="sec">
+      <h3 class="title">Latar Belakang Pendidikan</h3>
+      <div class="timeline" id="listPendidikan"></div>
+    </section>
+
+    <!-- ===== PROJECT ===== -->
+    <section id="project" class="sec">
+      <h3 class="title">Project Saya</h3>
+      <div class="grid" id="listProject"></div>
+    </section>
+
+    <!-- ===== KONTAK ===== -->
+    <section id="kontak" class="sec">
+      <h3 class="title">Ayo Ngobrol</h3>
+      <div class="contacts" id="listKontak"></div>
+    </section>
+  </main>
+
+  <footer class="footer" id="tFooter"></footer>
+
+  <!-- ===== PANEL EDIT ===== -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="panel" id="panel" aria-hidden="true">
+    <div class="panel-head">
+      <h3>Edit Portofolio</h3>
+      <button class="close" id="btnTutup" aria-label="Tutup">✕</button>
+    </div>
+
+    <div class="panel-body">
+      <h4>Profil</h4>
+      <label>Nama <input id="fNama"></label>
+      <label>Sapaan singkat <input id="fTag" placeholder="Contoh: 👋 Halo, saya"></label>
+      <label>Peran / profesi <input id="fPeran"></label>
+      <label>Kalimat pembuka <textarea id="fSingkat" rows="2"></textarea></label>
+      <label>Deskripsi tentang saya &amp; project yang saya kembangkan
+        <textarea id="fTentang" rows="5"></textarea>
+      </label>
+      <label>Ganti foto <input type="file" id="fFoto" accept="image/*"></label>
+      <label>Warna tema <input type="color" id="fWarna"></label>
+
+      <h4>Pendidikan</h4>
+      <div id="boxPendidikan"></div>
+      <button type="button" class="btn ghost small" id="addPendidikan">+ Tambah sekolah</button>
+
+      <h4>Project</h4>
+      <div id="boxProject"></div>
+      <button type="button" class="btn ghost small" id="addProject">+ Tambah project</button>
+
+      <h4>Kontak</h4>
+      <label>WhatsApp (angka saja, contoh 62812xxxx) <input id="fWa"></label>
+      <label>Username Instagram <input id="fIg"></label>
+      <label>Email <input id="fEmail" type="email"></label>
+    </div>
+
+    <div class="panel-foot">
+      <button class="btn" id="btnSimpan">💾 Simpan</button>
+      <button class="btn ghost" id="btnReset">Reset</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
